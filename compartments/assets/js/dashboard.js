@@ -37,7 +37,7 @@
       data.filter(d => classByType(d.Key)).map((link, key) =>
         React.createElement(
           'li',
-          {key, className: 'item'},
+          {key, className: `item ${classByType(link.Key)}`},
           React.createElement(
             'a',
             { key, href: `https://s3.amazonaws.com/safeword-storage/${link.Key}`, target: '_blank' },

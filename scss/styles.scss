@@ -603,6 +603,28 @@ ol.how-does-safeword-work{
   }
 }
 
+.features{
+
+  ul{
+
+    li{
+      border: 1px solid darken($yellow, 20%);
+      color: darken($yellow, 20%);
+      background-color: lighten($yellow, 25%);
+
+      &:before{
+        border-right: 3px solid darken($yellow, 10%);
+        border-bottom: 3px solid darken($yellow, 10%);
+      }
+
+      &:hover{
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+}
+
 // LOGIN
 
 .login-container{
