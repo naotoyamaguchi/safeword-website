@@ -1,5 +1,287 @@
-// STYLES
+@import 'partials/reset';
+
+$dark-grey: #282E30;
+$white: #FFF;
+$yellow: #FAC637;
+$green: #2BB509;
+
+$small-padding: 20px;
+$medium-padding: 30px;
+$large-padding: 50px;
+
+$medium-width: 768px;
+$large-width: 1024px;
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
 
 body{
-  background-color: red;
+  background-color: $dark-grey;
+  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.container{
+  border: 1px solid red;
+  background-color: $white;
+}
+
+.block{
+  max-width: 1000px;
+  border: 1px solid green;
+  margin: auto;
+}
+
+// NAV
+
+.nav-container{
+  background-color: $dark-grey;
+
+  padding: $small-padding*0.5 $small-padding;
+
+  .block{
+    max-width: none;
+  }
+}
+
+nav{
+  display: flex;
+  flex-flow: row nowrap;
+
+  ul{
+    flex: 1 0 auto;
+    background-color: pink;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    li{
+
+      a{
+
+      }
+    }
+  }
+}
+
+// LOGO
+
+.logo{
+  flex: 0 0 100px;
+
+  a{
+    display: block;
+    background-color: $yellow;
+
+    span{
+      background-color: $white;
+      display: block;
+    }
+  }
+}
+
+// FOOTER
+
+.footer-container{
+  background-color: $dark-grey;
+}
+
+// PRODUCT PROMOTION
+
+.product-container{
+
+  .block{
+    max-width: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include medium{
+      flex-flow: row nowrap;
+    }
+  }
+
+  .product-image{
+    background-color: pink;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: $medium-padding;
+
+    @include medium{
+      flex: 0 0 50%;
+      padding-top: $medium-padding;
+    }
+
+    .product-interface{
+      width: 300px;
+      height: 200px;
+      background-color: blue;
+      // margin-top: $medium-padding;
+
+      @include medium{
+        // margin-top: 0;
+        height: 320px;
+      }
+    }
+  }
+
+  .product-promotion{
+    flex: 0 0 100%;
+    background-color: yellow;
+    padding: $small-padding;
+
+    @include medium{
+      flex: 0 0 50%;
+      padding: $medium-padding;
+    }
+
+    @include large{
+      padding: $large-padding;
+    }
+
+    h2{
+      text-align: left;
+      font-size: 72px;
+      line-height: 72px;
+    }
+  }
+}
+
+.description-container{
+  padding: $small-padding;
+
+  @include medium{
+    padding: $medium-padding;
+  }
+
+  @include large{
+    padding: $large-padding;
+  }
+}
+
+.possible-applications{
+  display: flex;
+  flex-flow: row wrap;
+
+  @include medium{
+    flex-flow: row nowrap;
+  }
+
+  ul{
+
+    @include medium{
+      flex: 0 0 50%;
+    }
+  }
+}
+
+// LOGIN
+
+.login-container{
+  .block{
+    padding: $large-padding;
+    max-width: 500px;
+
+    @include medium{
+      margin-top: $large-padding;
+      margin-bottom: $large-padding;
+    }
+  }
+}
+
+// TYPE
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 300;
+  text-align: center;
+  color: lighten($dark-grey, 20%);
+  margin-bottom: $small-padding;
+  font-family: 'BenchNine', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1{
+  font-size: 32px;
+}
+
+h2{
+  font-size: 26px;
+}
+
+p{
+  font-size: 15px;
+  line-height: 20px;
+  color: lighten($dark-grey, 40%);
+
+  + p{
+    margin-top: $small-padding;
+  }
+}
+
+a{
+  color: lighten($dark-grey, 30%);
+  text-decoration: none;
+
+  &:hover{
+    color: $yellow;
+  }
+}
+
+// FORMS
+
+label{
+  font-size: 11px;
+  font-weight: 300;
+  color: lighten($dark-grey, 40%);
+  margin-bottom: 2px;
+}
+
+input,
+textarea{
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+input[type="text"]{
+  line-height: $medium-padding*1.25;
+  padding: 0 5px;
+}
+
+.input{
+  margin-bottom: $small-padding;
+
+  > *{
+    display: block;
+  }
+}
+
+button,
+a.button{
+  padding: $small-padding*0.75 $small-padding;
+  font-size: 13px;
+  display: block;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+
+  &:hover{
+    background-color: darken($green, 10%);
+    color: $white;
+  }
 }

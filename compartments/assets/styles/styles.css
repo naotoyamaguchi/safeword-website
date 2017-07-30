@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #282E30;
+  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif; }
+
+.container {
+  border: 1px solid red;
+  background-color: #FFF; }
+
+.block {
+  max-width: 1000px;
+  border: 1px solid green;
+  margin: auto; }
+
+.nav-container {
+  background-color: #282E30;
+  padding: 10px 20px; }
+  .nav-container .block {
+    max-width: none; }
+
+nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
+  nav ul {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    background-color: pink;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
+.logo {
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px; }
+  .logo a {
+    display: block;
+    background-color: #FAC637; }
+    .logo a span {
+      background-color: #FFF;
+      display: block; }
+
+.footer-container {
+  background-color: #282E30; }
+
+.product-container .block {
+  max-width: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+  @media (min-width: 768px) {
+    .product-container .block {
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+
+.product-container .product-image {
+  background-color: pink;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 30px; }
+  @media (min-width: 768px) {
+    .product-container .product-image {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      padding-top: 30px; } }
+  .product-container .product-image .product-interface {
+    width: 300px;
+    height: 200px;
+    background-color: blue; }
+    @media (min-width: 768px) {
+      .product-container .product-image .product-interface {
+        height: 320px; } }
+
+.product-container .product-promotion {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  background-color: yellow;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .product-container .product-promotion {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      padding: 30px; } }
+  @media (min-width: 768px) {
+    .product-container .product-promotion {
+      padding: 50px; } }
+  .product-container .product-promotion h2 {
+    text-align: left;
+    font-size: 72px;
+    line-height: 72px; }
+
+.description-container {
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .description-container {
+      padding: 30px; } }
+  @media (min-width: 768px) {
+    .description-container {
+      padding: 50px; } }
+
+.possible-applications {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+  @media (min-width: 768px) {
+    .possible-applications {
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+  @media (min-width: 768px) {
+    .possible-applications ul {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%; } }
+
+.login-container .block {
+  padding: 50px;
+  max-width: 500px; }
+  @media (min-width: 768px) {
+    .login-container .block {
+      margin-top: 50px;
+      margin-bottom: 50px; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  text-align: center;
+  color: #566368;
+  margin-bottom: 20px;
+  font-family: 'BenchNine', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 26px; }
+
+p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #88979c; }
+  p + p {
+    margin-top: 20px; }
+
+a {
+  color: #6e7e83;
+  text-decoration: none; }
+  a:hover {
+    color: #FAC637; }
+
+label {
+  font-size: 11px;
+  font-weight: 300;
+  color: #88979c;
+  margin-bottom: 2px; }
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif; }
+
+input[type="text"] {
+  line-height: 37.5px;
+  padding: 0 5px; }
+
+.input {
+  margin-bottom: 20px; }
+  .input > * {
+    display: block; }
+
+button,
+a.button {
+  padding: 15px 20px;
+  font-size: 13px;
+  display: block;
+  background-color: #2BB509;
+  color: #FFF;
+  text-align: center; }
+  button:hover,
+  a.button:hover {
+    background-color: #1f8407;
+    color: #FFF; }
