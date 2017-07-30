@@ -331,8 +331,8 @@ ol.how-does-safeword-work {
       -ms-flex-pack: justify;
       justify-content: space-between; } }
   ol.how-does-safeword-work li {
-    border: 1px solid red;
-    background-color: pink;
+    border: 1px solid #FED93E;
+    background-color: #FFF;
     color: #7e8689;
     text-align: center;
     font-size: 15px;
@@ -345,6 +345,21 @@ ol.how-does-safeword-work {
       ol.how-does-safeword-work li {
         -ms-flex: 0 0 32%;
         flex: 0 0 32%; } }
+    ol.how-does-safeword-work li.image-1 {
+      background-size: 110px auto;
+      background-position: center 60px;
+      background-repeat: no-repeat;
+      background-image: url("/assets/media/step-1.svg"); }
+    ol.how-does-safeword-work li.image-2 {
+      background-size: 90px auto;
+      background-position: center 30px;
+      background-repeat: no-repeat;
+      background-image: url("/assets/media/step-2.svg"); }
+    ol.how-does-safeword-work li.image-3 {
+      background-size: 120px auto;
+      background-position: center 30px;
+      background-repeat: no-repeat;
+      background-image: url("/assets/media/step-3.svg"); }
     ol.how-does-safeword-work li + li {
       margin-top: 10px; }
       @media (min-width: 768px) {

@@ -459,8 +459,8 @@ ol.how-does-safeword-work{
   }
 
   li{
-    border: 1px solid red;
-    background-color: pink;
+    border: 1px solid $yellow;
+    background-color: $white;
     color: $font-color;
     text-align: center;
     font-size: 15px;
@@ -472,6 +472,27 @@ ol.how-does-safeword-work{
 
     @include large{
       flex: 0 0 32%;
+    }
+
+    &.image-1{
+      background-size: 110px auto;
+      background-position: center 60px;
+      background-repeat: no-repeat;
+      background-image: url('/assets/media/step-1.svg');
+    }
+
+    &.image-2{
+      background-size: 90px auto;
+      background-position: center 30px;
+      background-repeat: no-repeat;
+      background-image: url('/assets/media/step-2.svg');
+    }
+
+    &.image-3{
+      background-size: 120px auto;
+      background-position: center 30px;
+      background-repeat: no-repeat;
+      background-image: url('/assets/media/step-3.svg');
     }
 
     + li{
