@@ -333,9 +333,12 @@ ol.how-does-safeword-work {
   ol.how-does-safeword-work li {
     border: 1px solid red;
     background-color: pink;
-    padding: 20px;
+    color: #7e8689;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 150px 20px 20px;
     margin: auto;
-    height: 200px;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%; }
     @media (min-width: 768px) {

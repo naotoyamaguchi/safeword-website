@@ -461,9 +461,13 @@ ol.how-does-safeword-work{
   li{
     border: 1px solid red;
     background-color: pink;
-    padding: $small-padding;
+    color: $font-color;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    padding: $large-padding*3 $small-padding $small-padding;
     margin: auto;
-    height: 200px;
+    // height: 250px;
     flex: 0 0 100%;
 
     @include large{
