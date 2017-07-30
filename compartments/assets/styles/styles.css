@@ -49,7 +49,7 @@ table {
   box-sizing: border-box; }
 
 body {
-  background-color: #282E30;
+  background-color: #5F6568;
   font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif; }
 
 .container {
@@ -62,7 +62,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   text-align: center;
-  color: #566368;
+  color: #92989b;
   margin-bottom: 20px;
   font-family: 'BenchNine', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
@@ -78,22 +78,22 @@ p {
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
-  color: #88979c; }
+  color: #c7cacc; }
   p + p {
     margin-top: 20px; }
 
 a {
-  color: #6e7e83;
+  color: #acb1b4;
   text-decoration: none;
   transition: all 0.2s ease; }
   a:hover {
-    color: #FAC637;
+    color: #FED93E;
     transition: all 0.2s ease; }
 
 label {
   font-size: 11px;
   font-weight: 300;
-  color: #88979c;
+  color: #c7cacc;
   margin-bottom: 2px; }
 
 input,
@@ -102,7 +102,7 @@ textarea {
   width: 100%;
   font-size: 13px;
   font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-  color: #88979c; }
+  color: #c7cacc; }
 
 input[type="text"] {
   line-height: 37.5px;
@@ -141,8 +141,8 @@ a.button {
     background-color: pink; }
 
 .nav-container {
-  background-color: #282E30;
-  padding: 20px 20px; }
+  background-color: #FFF;
+  padding: 10px 20px; }
   .nav-container .block {
     max-width: none; }
 
@@ -171,31 +171,19 @@ nav {
         margin-right: 5px; }
 
 .logo {
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px; }
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px; }
   .logo a {
-    display: block;
-    background-color: #FAC637; }
-    .logo a span {
-      background-color: pink;
-      display: block; }
+    display: block; }
 
 .footer-container {
-  background-color: #282E30;
+  background-color: #5F6568;
   padding: 20px;
   text-align: center;
   font-size: 11px; }
 
 .product-container {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
-  background: #7d7e7d;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7d7e7d 0%, #0e0e0e 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+  background-color: #2e3133; }
   .product-container .block {
     max-width: none;
     display: -ms-flexbox;
@@ -229,7 +217,7 @@ nav {
       margin-left: 20px;
       margin-right: 20px;
       height: 200px;
-      border: 16px solid #282E30;
+      border: 16px solid #5F6568;
       background-color: pink;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
@@ -261,10 +249,10 @@ nav {
         .product-container .product-promotion h2 {
           margin-top: 20px; } }
       .product-container .product-promotion h2 span {
-        color: #FAC637; }
+        color: #FED93E; }
     .product-container .product-promotion p {
       max-width: 400px;
-      color: #FFF;
+      color: #c7cacc;
       margin-bottom: 30px; }
       @media (min-width: 768px) {
         .product-container .product-promotion p {

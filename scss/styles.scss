@@ -1,8 +1,8 @@
 @import 'partials/reset';
 
-$dark-grey: #282E30;
+$dark-grey: #5F6568;
 $white: #FFF;
-$yellow: #FAC637;
+$yellow: #FED93E;
 $green: #2BB509;
 $font-color: lighten($dark-grey, 40%);
 
@@ -157,9 +157,9 @@ a.button{
 // NAV
 
 .nav-container{
-  background-color: $dark-grey;
+  background-color: $white;
 
-  padding: $small-padding $small-padding;
+  padding: $small-padding*0.5 $small-padding;
 
   .block{
     max-width: none;
@@ -198,15 +198,11 @@ nav{
 // LOGO
 
 .logo{
-  flex: 0 0 100px;
+  flex: 0 0 120px;
 
   a{
     display: block;
-    background-color: $yellow;
-
-    span{
-      background-color: pink;
-      display: block;
+    img{
     }
   }
 }
@@ -223,14 +219,8 @@ nav{
 // PRODUCT PROMOTION
 
 .product-container{
-  // background-color: lighten($dark-grey, 30%);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
-  background: #7d7e7d; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+  background-color: darken($dark-grey, 20%);
+  
   .block{
     max-width: none;
     display: flex;
@@ -315,7 +305,7 @@ nav{
 
     p{
       max-width: 400px;
-      color: $white;
+      color: lighten($dark-grey, 40%);
       margin-bottom: $medium-padding;
 
       @include medium{
