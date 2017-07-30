@@ -207,16 +207,27 @@ nav{
           margin-right: 20px;
           color: $font-color;
 
-          &:before{
-            content: " ";
-            width: 20px;
-            height: 20px;
+          span.profile{
             display: inline-block;
-            background-color: red;
-            border-radius: 10px;
             transform: translateY(5px);
             margin-right: 5px;
+
+            svg{
+              width: 20px;
+              height: 20px;
+            }
           }
+
+          // &:before{
+          //   content: " ";
+          //   width: 20px;
+          //   height: 20px;
+          //   display: inline-block;
+          //   background-color: red;
+          //   border-radius: 10px;
+          //   transform: translateY(5px);
+          //   margin-right: 5px;
+          // }
         }
       }
 

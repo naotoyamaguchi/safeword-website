@@ -81,7 +81,11 @@ li.item a{
     top: 15px;
     width: 30px;
     height: 30px;
-    background-color: lighten($font-color, 20%);
+    // background-color: lighten($font-color, 20%);
+    background-image: url('/assets/media/download.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
   }
 
   &:hover{
@@ -89,7 +93,8 @@ li.item a{
     border-color: $green;
 
     &:after{
-      background-color: $white;
+      background-image: url('/assets/media/download-white.svg');
+      // background-color: $white;
     }
 
     p{
