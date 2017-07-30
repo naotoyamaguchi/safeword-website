@@ -1,13 +1,10 @@
 @import 'partials/reset';
-@import 'partials/downloads';
-
-
 
 $dark-grey: #4D5254;
 $white: #FFF;
 $yellow: #FED93E;
 $green: #2BB509;
-$font-color: lighten($dark-grey, 40%);
+$font-color: lighten($dark-grey, 20%);
 
 $small-padding: 20px;
 $medium-padding: 30px;
@@ -93,24 +90,34 @@ a{
 // FORMS
 
 label{
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: $font-color;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 input,
 textarea{
   display: block;
   width: 100%;
-  font-size: 13px;
-  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
   color: $font-color;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &:focus{
+    outline: none;
+    border-bottom: 1px solid $dark-grey;
+    transition: all 0.2s ease;
+  }
 }
 
 input[type="text"]{
-  line-height: $medium-padding*1.25;
-  padding: 0 5px;
+  line-height: $medium-padding*1.75;
+  padding: 0 10px;
 }
 
 .input{
@@ -123,13 +130,13 @@ input[type="text"]{
 
 .button-container{
   // background-color: pink;
-  height: 50px;
+  height: 59px;
 }
 
 button,
 a.button{
-  padding: $small-padding*0.75 $small-padding;
-  font-size: 14px;
+  padding: $small-padding $small-padding;
+  font-size: 15px;
   display: block;
   background-color: $green;
   color: $white;
@@ -144,6 +151,10 @@ a.button{
     transform: translateY(3px);
     // border-top: 3px solid $white;
     // margin-bottom: 3px;
+  }
+
+  &:focus{
+    outline: none;
   }
 
   span{
@@ -182,8 +193,38 @@ nav{
 
     li{
 
+      &.user-profile{
+
+        display: none;
+
+        @include medium{
+          display: inline-block;
+          // background-color: pink;
+          font-size: 13px;
+          // margin-top: 4px;
+          line-height: 13px;
+          margin-right: 20px;
+          color: $font-color;
+
+          &:before{
+            content: " ";
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background-color: red;
+            border-radius: 10px;
+            transform: translateY(5px);
+            margin-right: 5px;
+          }
+        }
+      }
+
       a{
         font-size: 13px;
+        color: $font-color;
+        // background-color: orange;
+        display: block;
+        margin-top: 9px;
 
         &:before{
           content: " ";
@@ -192,6 +233,14 @@ nav{
           height: 10px;
           background-color: pink;
           margin-right: 5px;
+          transition: all 0.2s ease;
+        }
+
+        &:hover{
+          &:before{
+            background-color: red;
+            transition: all 0.2s ease;
+          }
         }
       }
     }
@@ -201,7 +250,7 @@ nav{
 // LOGO
 
 .logo{
-  flex: 0 0 120px;
+  flex: 0 0 100px;
 
   a{
     display: block;
@@ -223,6 +272,11 @@ nav{
 
 .product-container{
   background-color: darken($dark-grey, 10%);
+
+  @include large{
+    z-index: 0;
+    position: relative;
+  }
   
   .block{
     max-width: none;
@@ -262,9 +316,8 @@ nav{
       border: 16px solid $dark-grey;
       background-color: pink;
       // background-color: lighten($dark-grey, 70%);
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0,0,0, 0.25);
       // margin-top: $medium-padding;
 
       @include medium{
@@ -272,6 +325,12 @@ nav{
         height: 300px;
         width: 80%;
         max-width: 450px;
+      }
+
+      @include large{
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
   }
@@ -294,11 +353,11 @@ nav{
       text-align: left;
       font-size: 68px;
       line-height: 80px;
-      max-width: 400px;
       color: $white;
 
       @include large{
-        margin-top: $small-padding;
+        max-width: 400px;
+        // margin-top: $small-padding;
       }
 
       span{
@@ -307,26 +366,33 @@ nav{
     }
 
     p{
-      max-width: 400px;
       color: lighten($dark-grey, 40%);
       margin-bottom: $medium-padding;
 
       @include medium{
         margin-bottom: 0;
       }
+
+      @include large{
+        max-width: 400px;
+      }
     }
   }
 }
 
 .description-container{
-  padding: $medium-padding;
+  padding: $medium-padding $medium-padding $medium-padding*1.5;
 
   @include medium{
     // padding: $medium-padding;
   }
 
   @include large{
+    // transform: translateY(-10px);
     padding: $large-padding*1.5;
+    z-index: 1;
+    position: relative;
+    margin-top: -10px;
   }
 
   .block{
@@ -334,7 +400,11 @@ nav{
   }
 
   .button-container{
-    margin-top: $large-padding;
+    margin-top: $medium-padding;
+
+    @include large{
+      margin-top: $large-padding;
+    }
   }
 
   .button{
@@ -346,8 +416,13 @@ nav{
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
+    margin-bottom: $small-padding;
+
+    @include large{
+      margin-bottom: $large-padding;
+    }
   }
 
   h2{
@@ -366,17 +441,29 @@ ol.how-does-safeword-work{
 
   li{
     border: 1px solid red;
-    flex: 0 0 32%;
     background-color: pink;
     padding: $small-padding;
     margin: auto;
     height: 200px;
+    flex: 0 0 100%;
+
+    @include large{
+      flex: 0 0 32%;
+    }
+
+    + li{
+      margin-top: $small-padding*0.5;
+
+      @include large{
+        margin-top: 0;
+      }
+    }
   }
 }
 
 .possible-applications-container{
   background-color: lighten($dark-grey, 60%);
-  padding: $small-padding;
+  padding: $medium-padding $medium-padding;
 
   @include medium{
     padding: $medium-padding;
@@ -390,7 +477,7 @@ ol.how-does-safeword-work{
 .possible-applications{
   display: flex;
   flex-flow: row wrap;
-  margin: $medium-padding auto;
+  margin: $small-padding auto;
   // border: 1px solid $green;
   max-width: 580px;
 
@@ -399,20 +486,35 @@ ol.how-does-safeword-work{
   }
 
   ul{
+    width: 100%;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-flow: row wrap;
 
     @include medium{
-      flex: 0 0 50%;
+      justify-content: space-between;
     }
 
     li{
+      flex: 0 0 100%;
       padding-left: 51px;
       border: 1px solid $green;
       position: relative;
       line-height: 60px;
       color: $green;
       background-color: lighten($green, 50%);
-      margin: 10px 5px;
+      margin: 5px 0;
       transition: all 0.2s ease;
+
+      @include medium{
+        flex: 0 0 49%;
+      }
+
+      @include large{
+        z-index: 0;
+        position: relative;
+      }
 
       &:before{
         content: " ";
@@ -441,23 +543,13 @@ ol.how-does-safeword-work{
   }
 }
 
-.downloads-container{
-  padding: $small-padding;
-
-  @include medium{
-    padding: $medium-padding;
-  }
-
-  @include large{
-    padding: $large-padding;
-  }
-}
-
 // LOGIN
 
 .login-container{
+  background-color: lighten($dark-grey, 60%);
+
   .block{
-    padding: $large-padding $large-padding $large-padding*1.25;
+    padding: $large-padding*1.5 $large-padding;
     max-width: 500px;
 
     @include medium{
@@ -467,3 +559,30 @@ ol.how-does-safeword-work{
   }
 }
 
+// DASHBOARD
+
+.summary-container{
+  background-color: $dark-grey;
+
+  .block{
+    padding: $small-padding;
+
+    @include medium{
+      padding: $small-padding $large-padding;
+    }
+  }
+}
+
+.downloads-container{
+  background-color: lighten($dark-grey, 60%);
+
+  .block{
+    padding: $large-padding $small-padding;
+
+    @include medium{
+      padding: $large-padding $large-padding $large-padding*1.5;
+    }
+  }
+}
+
+@import 'partials/downloads';
