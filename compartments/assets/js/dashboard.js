@@ -51,7 +51,7 @@
           React.createElement(
           'p',
           { key, className: 'item-detail'},
-          `File Size: ${link.Size/1000}KB`)
+          `File Size: ${Math.round(link.Size/1000 * 100) / 100}KB`)
           ],
           [
           React.createElement(
