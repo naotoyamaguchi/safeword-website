@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 32px;
+  line-height: 36px;
   color: #2BB509; }
 
 h2 {
@@ -489,6 +490,43 @@ ol.how-does-safeword-work {
     @media (min-width: 768px) {
       .downloads-container .block {
         padding: 50px 50px 75px; } }
+
+.activation-container {
+  padding: 30px 30px 45px;
+  border-top: 1px solid #ced1d2; }
+  @media (min-width: 768px) {
+    .activation-container {
+      padding: 75px;
+      z-index: 1;
+      position: relative;
+      margin-top: -10px; } }
+  .activation-container .block {
+    max-width: 700px; }
+  .activation-container .button-container {
+    margin-top: 30px; }
+    @media (min-width: 768px) {
+      .activation-container .button-container {
+        margin-top: 50px; } }
+  .activation-container .button {
+    max-width: 300px;
+    margin: auto; }
+  .activation-container p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .activation-container p {
+        margin-bottom: 50px; } }
+  .activation-container h2 {
+    margin-top: 50px;
+    color: #2BB509; }
+  @media (min-width: 768px) {
+    .activation-container ol.how-does-safeword-work li {
+      -ms-flex: 0 0 45%;
+      flex: 0 0 45%; } }
 
 span.lock {
   display: inline-block; }
