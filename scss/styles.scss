@@ -1,6 +1,6 @@
 @import 'partials/reset';
 
-$dark-grey: #5F6568;
+$dark-grey: #4D5254;
 $white: #FFF;
 $yellow: #FED93E;
 $green: #2BB509;
@@ -31,7 +31,7 @@ $large-width: 1024px;
 
 body{
   background-color: $dark-grey;
-  font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
 .container{
@@ -52,9 +52,9 @@ h1, h2, h3, h4, h5, h6{
   text-align: center;
   color: lighten($dark-grey, 20%);
   margin-bottom: $small-padding;
-  font-family: 'BenchNine', 'Helvetica Neue', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  // text-transform: uppercase;
+  // letter-spacing: 1px;
 }
 
 h1{
@@ -219,7 +219,7 @@ nav{
 // PRODUCT PROMOTION
 
 .product-container{
-  background-color: darken($dark-grey, 20%);
+  background-color: darken($dark-grey, 10%);
   
   .block{
     max-width: none;
@@ -289,8 +289,8 @@ nav{
 
     h2{
       text-align: left;
-      font-size: 72px;
-      line-height: 72px;
+      font-size: 68px;
+      line-height: 80px;
       max-width: 400px;
       color: $white;
 
@@ -323,11 +323,15 @@ nav{
   }
 
   @include large{
-    padding: $large-padding;
+    padding: $large-padding*1.5;
   }
 
   .block{
     max-width: 700px;
+  }
+
+  .button-container{
+    margin-top: $large-padding;
   }
 
   .button{
@@ -348,23 +352,44 @@ nav{
   }
 }
 
-.possible-applications-container{
-  border: 1px solid $green;
-  margin: auto;
-  max-width: 600px;
-  margin-top: $medium-padding;
-  margin-bottom: $medium-padding;
+ol.how-does-safeword-work{
+  display: flex;
+  flex-flow: row wrap;
 
   @include medium{
-    margin-top: $large-padding;
-    margin-bottom: $large-padding;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  li{
+    border: 1px solid red;
+    flex: 0 0 32%;
+    background-color: pink;
+    padding: $small-padding;
+    margin: auto;
+    height: 200px;
+  }
+}
+
+.possible-applications-container{
+  background-color: lighten($dark-grey, 60%);
+  padding: $small-padding;
+
+  @include medium{
+    padding: $medium-padding;
+  }
+
+  @include large{
+    padding: $large-padding*1.5;
   }
 }
 
 .possible-applications{
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: $large-padding*1.25;
+  margin: $medium-padding auto;
+  // border: 1px solid $green;
+  max-width: 580px;
 
   @include medium{
     flex-flow: row nowrap;
@@ -377,20 +402,37 @@ nav{
     }
 
     li{
-      padding-left: 55px;
+      padding-left: 51px;
+      border: 1px solid $green;
       position: relative;
-      line-height: 30px;
+      line-height: 60px;
       color: $green;
+      background-color: lighten($green, 50%);
+      margin: 10px 5px;
+      transition: all 0.2s ease;
 
       &:before{
         content: " ";
-        width: 10px;
+        width: 8px;
         height: 15px;
-        border-right: 3px solid $green;
-        border-bottom: 3px solid $green;
+        border-right: 3px solid #2BB509;
+        border-bottom: 3px solid #2BB509;
         display: block;
         position: absolute;
-        transform: rotate(45deg) translateX(-13px) translateY(16px);
+        transform: rotate(45deg) translateX(-5px) translateY(30px);
+        transition: all 0.2s ease;
+      }
+
+      &:hover{
+        background-color: $green;
+        color: $white;
+        transition: all 0.2s ease;
+
+        &:before{
+          border-right-color: $white;
+          border-bottom-color: $white;
+          transition: all 0.2s ease;
+        }
       }
     }
   }
