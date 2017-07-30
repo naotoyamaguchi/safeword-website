@@ -406,6 +406,18 @@ nav{
   }
 }
 
+.downloads-container{
+  padding: $small-padding;
+
+  @include medium{
+    padding: $medium-padding;
+  }
+
+  @include large{
+    padding: $large-padding;
+  }
+}
+
 // LOGIN
 
 .login-container{

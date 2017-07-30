@@ -329,6 +329,15 @@ nav {
       position: absolute;
       transform: rotate(45deg) translateX(-13px) translateY(16px); }
 
+.downloads-container {
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .downloads-container {
+      padding: 30px; } }
+  @media (min-width: 768px) {
+    .downloads-container {
+      padding: 50px; } }
+
 .login-container .block {
   padding: 50px 50px 62.5px;
   max-width: 500px; }
