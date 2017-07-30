@@ -29,14 +29,14 @@
 // HEADER WITH LOCK ICON
 
 h2.secure-backups{
-  &:before{
-    display: inline-block;
-    content: " ";
-    width: 20px;
-    height: 20px;
-    background-color: pink;
-    margin-right: 7px;
-  }
+  // &:before{
+  //   display: inline-block;
+  //   content: " ";
+  //   width: 20px;
+  //   height: 20px;
+  //   background-color: pink;
+  //   margin-right: 7px;
+  // }
 }
 
 // LIST OF DOWNLOADS
@@ -61,6 +61,7 @@ li.item{
 }
 
 li.item a{
+  display: block;
   border: 1px solid lighten($font-color, 20%);
   padding: 10px;
   position: relative;

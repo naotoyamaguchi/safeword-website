@@ -115,6 +115,7 @@ textarea{
   }
 }
 
+input[type="password"],
 input[type="text"]{
   line-height: $medium-padding*1.75;
   padding: 0 10px;
@@ -157,16 +158,16 @@ a.button{
     outline: none;
   }
 
-  span{
-    &:before{
-      content: "";
-      width: 10px;
-      height: 10px;
-      display: inline-block;
-      margin-right: 5px;
-      background-color: pink;
-    }
-  }
+  // span{
+  //   &:before{
+  //     content: "";
+  //     width: 10px;
+  //     height: 10px;
+  //     display: inline-block;
+  //     margin-right: 5px;
+  //     background-color: pink;
+  //   }
+  // }
 }
 // NAV
 
@@ -226,21 +227,21 @@ nav{
         display: block;
         margin-top: 9px;
 
-        &:before{
-          content: " ";
-          display: inline-block;
-          width: 10px;
-          height: 10px;
-          background-color: pink;
-          margin-right: 5px;
-          transition: all 0.2s ease;
-        }
+        // &:before{
+        //   content: " ";
+        //   display: inline-block;
+        //   width: 10px;
+        //   height: 10px;
+        //   background-color: pink;
+        //   margin-right: 5px;
+        //   transition: all 0.2s ease;
+        // }
 
         &:hover{
-          &:before{
-            background-color: red;
-            transition: all 0.2s ease;
-          }
+          // &:before{
+          //   background-color: red;
+          //   transition: all 0.2s ease;
+          // }
         }
       }
     }
@@ -581,6 +582,65 @@ ol.how-does-safeword-work{
 
     @include medium{
       padding: $large-padding $large-padding $large-padding*1.5;
+    }
+  }
+}
+
+// LOCK
+
+span.lock{
+  display: inline-block;
+
+  svg path{
+    fill: red;
+    transition: all 0.2s ease;
+  }
+
+  .button &, button &{
+    margin-right: 7px;
+    transform: translateY(1px);
+
+    svg{
+      width: 15px;
+      height: 15px;
+    }
+
+    svg path{
+      fill: $white;
+    }
+  }
+
+  h2{
+    margin-right: 7px;
+    
+    svg{
+      width: 25px;
+      height: 25px;
+    }
+
+    svg path{
+      fill: $font-color;
+    }
+  }
+
+  nav ul li a &{
+    margin-right: 5px;
+    
+    svg{
+      width: 10px;
+      height: 10px;
+    }
+
+    svg path{
+      fill: $font-color;
+    }
+  }
+
+  nav ul li a:hover &{
+
+    svg path{
+      fill: $yellow;
+      transition: all 0.2s ease;
     }
   }
 }

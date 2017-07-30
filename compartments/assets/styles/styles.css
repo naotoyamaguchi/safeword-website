@@ -111,6 +111,7 @@ textarea {
     border-bottom: 1px solid #4D5254;
     transition: all 0.2s ease; }
 
+input[type="password"],
 input[type="text"] {
   line-height: 52.5px;
   padding: 0 10px; }
@@ -141,14 +142,6 @@ a.button {
   button:focus,
   a.button:focus {
     outline: none; }
-  button span:before,
-  a.button span:before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin-right: 5px;
-    background-color: pink; }
 
 .nav-container {
   background-color: #FFF;
@@ -193,17 +186,6 @@ nav {
       color: #7e8689;
       display: block;
       margin-top: 9px; }
-      nav ul li a:before {
-        content: " ";
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: pink;
-        margin-right: 5px;
-        transition: all 0.2s ease; }
-      nav ul li a:hover:before {
-        background-color: red;
-        transition: all 0.2s ease; }
 
 .logo {
   -ms-flex: 0 0 100px;
@@ -455,6 +437,37 @@ ol.how-does-safeword-work {
       .downloads-container .block {
         padding: 50px 50px 75px; } }
 
+span.lock {
+  display: inline-block; }
+  span.lock svg path {
+    fill: red;
+    transition: all 0.2s ease; }
+  .button span.lock, button span.lock {
+    margin-right: 7px;
+    transform: translateY(1px); }
+    .button span.lock svg, button span.lock svg {
+      width: 15px;
+      height: 15px; }
+    .button span.lock svg path, button span.lock svg path {
+      fill: #FFF; }
+  span.lock h2 {
+    margin-right: 7px; }
+    span.lock h2 svg {
+      width: 25px;
+      height: 25px; }
+    span.lock h2 svg path {
+      fill: #7e8689; }
+  nav ul li a span.lock {
+    margin-right: 5px; }
+    nav ul li a span.lock svg {
+      width: 10px;
+      height: 10px; }
+    nav ul li a span.lock svg path {
+      fill: #7e8689; }
+  nav ul li a:hover span.lock svg path {
+    fill: #FED93E;
+    transition: all 0.2s ease; }
+
 .modules {
   display: -ms-flexbox;
   display: flex;
@@ -481,14 +494,6 @@ ol.how-does-safeword-work {
       -ms-flex: 0 0 67%;
       flex: 0 0 67%; } }
 
-h2.secure-backups:before {
-  display: inline-block;
-  content: " ";
-  width: 20px;
-  height: 20px;
-  background-color: pink;
-  margin-right: 7px; }
-
 .list-container {
   display: -ms-flexbox;
   display: flex;
@@ -510,6 +515,7 @@ li.item {
       margin-bottom: 7px; } }
 
 li.item a {
+  display: block;
   border: 1px solid #b3b8ba;
   padding: 10px;
   position: relative;
