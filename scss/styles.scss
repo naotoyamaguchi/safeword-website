@@ -4,6 +4,7 @@ $dark-grey: #282E30;
 $white: #FFF;
 $yellow: #FAC637;
 $green: #2BB509;
+$font-color: lighten($dark-grey, 40%);
 
 $small-padding: 20px;
 $medium-padding: 30px;
@@ -34,172 +35,14 @@ body{
 }
 
 .container{
-  border: 1px solid red;
+  // border: 1px solid red;
   background-color: $white;
 }
 
 .block{
   max-width: 1000px;
-  border: 1px solid green;
+  // border: 1px solid green;
   margin: auto;
-}
-
-// NAV
-
-.nav-container{
-  background-color: $dark-grey;
-
-  padding: $small-padding*0.5 $small-padding;
-
-  .block{
-    max-width: none;
-  }
-}
-
-nav{
-  display: flex;
-  flex-flow: row nowrap;
-
-  ul{
-    flex: 1 0 auto;
-    background-color: pink;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-
-    li{
-
-      a{
-
-      }
-    }
-  }
-}
-
-// LOGO
-
-.logo{
-  flex: 0 0 100px;
-
-  a{
-    display: block;
-    background-color: $yellow;
-
-    span{
-      background-color: $white;
-      display: block;
-    }
-  }
-}
-
-// FOOTER
-
-.footer-container{
-  background-color: $dark-grey;
-}
-
-// PRODUCT PROMOTION
-
-.product-container{
-
-  .block{
-    max-width: none;
-    display: flex;
-    flex-flow: row wrap;
-
-    @include medium{
-      flex-flow: row nowrap;
-    }
-  }
-
-  .product-image{
-    background-color: pink;
-    flex: 0 0 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-top: $medium-padding;
-
-    @include medium{
-      flex: 0 0 50%;
-      padding-top: $medium-padding;
-    }
-
-    .product-interface{
-      width: 300px;
-      height: 200px;
-      background-color: blue;
-      // margin-top: $medium-padding;
-
-      @include medium{
-        // margin-top: 0;
-        height: 320px;
-      }
-    }
-  }
-
-  .product-promotion{
-    flex: 0 0 100%;
-    background-color: yellow;
-    padding: $small-padding;
-
-    @include medium{
-      flex: 0 0 50%;
-      padding: $medium-padding;
-    }
-
-    @include large{
-      padding: $large-padding;
-    }
-
-    h2{
-      text-align: left;
-      font-size: 72px;
-      line-height: 72px;
-    }
-  }
-}
-
-.description-container{
-  padding: $small-padding;
-
-  @include medium{
-    padding: $medium-padding;
-  }
-
-  @include large{
-    padding: $large-padding;
-  }
-}
-
-.possible-applications{
-  display: flex;
-  flex-flow: row wrap;
-
-  @include medium{
-    flex-flow: row nowrap;
-  }
-
-  ul{
-
-    @include medium{
-      flex: 0 0 50%;
-    }
-  }
-}
-
-// LOGIN
-
-.login-container{
-  .block{
-    padding: $large-padding;
-    max-width: 500px;
-
-    @include medium{
-      margin-top: $large-padding;
-      margin-bottom: $large-padding;
-    }
-  }
 }
 
 // TYPE
@@ -224,8 +67,9 @@ h2{
 
 p{
   font-size: 15px;
+  font-weight: 300;
   line-height: 20px;
-  color: lighten($dark-grey, 40%);
+  color: $font-color;
 
   + p{
     margin-top: $small-padding;
@@ -235,9 +79,11 @@ p{
 a{
   color: lighten($dark-grey, 30%);
   text-decoration: none;
+  transition: all 0.2s ease;
 
   &:hover{
     color: $yellow;
+    transition: all 0.2s ease;
   }
 }
 
@@ -246,7 +92,7 @@ a{
 label{
   font-size: 11px;
   font-weight: 300;
-  color: lighten($dark-grey, 40%);
+  color: $font-color;
   margin-bottom: 2px;
 }
 
@@ -256,6 +102,7 @@ textarea{
   width: 100%;
   font-size: 13px;
   font-family: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  color: $font-color;
 }
 
 input[type="text"]{
@@ -271,17 +118,304 @@ input[type="text"]{
   }
 }
 
+.button-container{
+  // background-color: pink;
+  height: 50px;
+}
+
 button,
 a.button{
   padding: $small-padding*0.75 $small-padding;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
   background-color: $green;
   color: $white;
   text-align: center;
+  border-bottom: 4px solid darken($green, 10%);
+  // border-radius: 2px;
 
   &:hover{
-    background-color: darken($green, 10%);
+    background-color: darken($green, 5%);
     color: $white;
+    border-bottom: 1px solid darken($green, 20%);
+    transform: translateY(3px);
+    // border-top: 3px solid $white;
+    // margin-bottom: 3px;
+  }
+
+  span{
+    &:before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin-right: 5px;
+      background-color: pink;
+    }
+  }
+}
+// NAV
+
+.nav-container{
+  background-color: $dark-grey;
+
+  padding: $small-padding $small-padding;
+
+  .block{
+    max-width: none;
+  }
+}
+
+nav{
+  display: flex;
+  flex-flow: row nowrap;
+
+  ul{
+    flex: 1 0 auto;
+    // background-color: pink;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    li{
+
+      a{
+        font-size: 13px;
+
+        &:before{
+          content: " ";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: pink;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+// LOGO
+
+.logo{
+  flex: 0 0 100px;
+
+  a{
+    display: block;
+    background-color: $yellow;
+
+    span{
+      background-color: pink;
+      display: block;
+    }
+  }
+}
+
+// FOOTER
+
+.footer-container{
+  background-color: $dark-grey;
+  padding: $small-padding;
+  text-align: center;
+  font-size: 11px;
+}
+
+// PRODUCT PROMOTION
+
+.product-container{
+  // background-color: lighten($dark-grey, 30%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+  background: #7d7e7d; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  .block{
+    max-width: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include medium{
+      flex-flow: row nowrap;
+    }
+  }
+
+  .product-image{
+    // background-color: pink;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: $medium-padding;
+
+    @include medium{
+      flex: 0 0 50%;
+      padding-top: 0;
+    }
+
+    @include large{
+      padding-top: $large-padding;
+    }
+
+    .product-interface{
+      // width: 300px;
+      width: 100%;
+      margin-left: $small-padding;
+      margin-right: $small-padding;
+      height: 200px;
+      // background-color: blue;
+      // border: 1px solid blue;
+      border: 16px solid $dark-grey;
+      background-color: pink;
+      // background-color: lighten($dark-grey, 70%);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 0;
+      // margin-top: $medium-padding;
+
+      @include medium{
+        // margin-top: 0;
+        height: 300px;
+        width: 80%;
+        max-width: 450px;
+      }
+    }
+  }
+
+  .product-promotion{
+    flex: 0 0 100%;
+    // background-color: yellow;
+    padding: $small-padding;
+
+    @include medium{
+      flex: 0 0 50%;
+      padding: 0 $medium-padding $medium-padding;
+    }
+
+    @include large{
+      padding: $large-padding;
+    }
+
+    h2{
+      text-align: left;
+      font-size: 72px;
+      line-height: 72px;
+      max-width: 400px;
+      color: $white;
+
+      @include large{
+        margin-top: $small-padding;
+      }
+
+      span{
+        color: $yellow;
+      }
+    }
+
+    p{
+      max-width: 400px;
+      color: $white;
+      margin-bottom: $medium-padding;
+
+      @include medium{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.description-container{
+  padding: $medium-padding;
+
+  @include medium{
+    // padding: $medium-padding;
+  }
+
+  @include large{
+    padding: $large-padding;
+  }
+
+  .block{
+    max-width: 700px;
+  }
+
+  .button{
+    max-width: 300px;
+    margin: auto;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  h2{
+    margin-top: $large-padding;
+  }
+}
+
+.possible-applications-container{
+  border: 1px solid $green;
+  margin: auto;
+  max-width: 600px;
+  margin-top: $medium-padding;
+  margin-bottom: $medium-padding;
+
+  @include medium{
+    margin-top: $large-padding;
+    margin-bottom: $large-padding;
+  }
+}
+
+.possible-applications{
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: $large-padding*1.25;
+
+  @include medium{
+    flex-flow: row nowrap;
+  }
+
+  ul{
+
+    @include medium{
+      flex: 0 0 50%;
+    }
+
+    li{
+      padding-left: 55px;
+      position: relative;
+      line-height: 30px;
+      color: $green;
+
+      &:before{
+        content: " ";
+        width: 10px;
+        height: 15px;
+        border-right: 3px solid $green;
+        border-bottom: 3px solid $green;
+        display: block;
+        position: absolute;
+        transform: rotate(45deg) translateX(-13px) translateY(16px);
+      }
+    }
+  }
+}
+
+// LOGIN
+
+.login-container{
+  .block{
+    padding: $large-padding $large-padding $large-padding*1.25;
+    max-width: 500px;
+
+    @include medium{
+      // padding-top: $large-padding;
+      // padding-bottom: $large-padding;
+    }
   }
 }
