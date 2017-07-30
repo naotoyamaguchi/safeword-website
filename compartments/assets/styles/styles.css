@@ -457,6 +457,17 @@ ol.how-does-safeword-work {
     .features-container {
       padding: 75px; } }
 
+.features ul li {
+  border: 1px solid #d5ac01;
+  color: #d5ac01;
+  background-color: #fff2bd; }
+  .features ul li:before {
+    border-right: 3px solid #fecf0b;
+    border-bottom: 3px solid #fecf0b; }
+  .features ul li:hover {
+    background-color: #FED93E;
+    color: #FFF; }
+
 .login-container {
   background-color: #e9eaea; }
   .login-container .block {
