@@ -49,14 +49,14 @@
           { key, className: 'item', href: `https://s3.amazonaws.com/safeword-storage/${link.Key}` },
           [
           React.createElement(
-          'h3',
-          { key, className: 'item'},
-          `${moment(link.LastModified).fromNow()}`)
+          'p',
+          { key, className: 'item-detail'},
+          `File Size: ${link.Size/1000}KB`)
           ],
           [
           React.createElement(
-          'h3',
-          { key, className: 'item'},
+          'p',
+          { key, className: 'item-detail'},
           `${moment(link.LastModified).calendar()}`)
           ]
           )

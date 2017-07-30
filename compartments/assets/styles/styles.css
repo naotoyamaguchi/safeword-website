@@ -47,7 +47,6 @@ table {
 
 .list-container {
   margin-bottom: 5px;
-  border: 2px solid black;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -61,25 +60,42 @@ table {
   -ms-flex-pack: left;
   justify-content: left;
   width: 80%;
-  border: 1px solid black;
   margin-right: auto;
   margin-left: auto; }
 
 .item {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
   width: 80%;
-  border: 1px solid black;
+  border-radius: 5px;
+  border: 1px solid #2BB509;
   margin-right: auto;
   margin-left: auto;
-  font-size: 5vw;
-  margin-bottom: 10px; }
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 4vw;
+  box-shadow: 4px 4px 5px 0px #c4c4c4; }
+  @media (min-width: 768px) {
+    .item {
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-align: left;
+      align-items: left;
+      -ms-flex-pack: left;
+      justify-content: left; } }
+
+.item-detail {
+  margin-top: 0px; }
+  @media (min-width: 768px) {
+    .item-detail {
+      margin-left: auto;
+      margin-right: auto; } }
 
 * {
   box-sizing: border-box; }
