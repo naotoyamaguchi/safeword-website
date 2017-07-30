@@ -510,6 +510,21 @@ span.lock {
     fill: #FED93E;
     transition: all 0.2s ease; }
 
+.subnav-container {
+  background-color: #4D5254; }
+  .subnav-container ul {
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    .subnav-container ul li {
+      display: inline-block; }
+      .subnav-container ul li a {
+        display: block;
+        padding: 15px;
+        font-size: 14px; }
+      .subnav-container ul li.active a {
+        color: #FED93E; }
+
 .modules {
   display: -ms-flexbox;
   display: flex;

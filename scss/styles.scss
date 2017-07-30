@@ -704,4 +704,32 @@ span.lock{
   }
 }
 
+// SUBNAV
+
+.subnav-container{
+  background-color: $dark-grey;
+
+  ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    li{
+      display: inline-block;
+
+      a{
+        display: block;
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      &.active{
+        a{
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
 @import 'partials/downloads';
