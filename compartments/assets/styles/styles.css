@@ -67,7 +67,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+  color: #2BB509; }
 
 h2 {
   font-size: 26px; }
@@ -235,9 +236,12 @@ nav {
       width: 100%;
       margin-left: 20px;
       margin-right: 20px;
-      height: 200px;
+      height: 300px;
       border: 16px solid #4D5254;
-      background-color: pink;
+      background-image: url("/assets/media/screenshot.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
       border-radius: 5px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); }
       @media (min-width: 768px) {
@@ -283,7 +287,8 @@ nav {
           max-width: 400px; } }
 
 .description-container {
-  padding: 30px 30px 45px; }
+  padding: 30px 30px 45px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.15); }
   @media (min-width: 768px) {
     .description-container {
       padding: 75px;
@@ -311,7 +316,8 @@ nav {
       .description-container p {
         margin-bottom: 50px; } }
   .description-container h2 {
-    margin-top: 50px; }
+    margin-top: 50px;
+    color: #2BB509; }
 
 ol.how-does-safeword-work {
   display: -ms-flexbox;
@@ -352,7 +358,8 @@ ol.how-does-safeword-work {
     .possible-applications-container {
       padding: 75px; } }
 
-.possible-applications {
+.possible-applications,
+.features {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
@@ -360,10 +367,12 @@ ol.how-does-safeword-work {
   margin: 20px auto;
   max-width: 580px; }
   @media (min-width: 768px) {
-    .possible-applications {
+    .possible-applications,
+    .features {
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
-  .possible-applications ul {
+  .possible-applications ul,
+  .features ul {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -372,10 +381,12 @@ ol.how-does-safeword-work {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap; }
     @media (min-width: 768px) {
-      .possible-applications ul {
+      .possible-applications ul,
+      .features ul {
         -ms-flex-pack: justify;
         justify-content: space-between; } }
-    .possible-applications ul li {
+    .possible-applications ul li,
+    .features ul li {
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       padding-left: 51px;
@@ -387,14 +398,17 @@ ol.how-does-safeword-work {
       margin: 5px 0;
       transition: all 0.2s ease; }
       @media (min-width: 768px) {
-        .possible-applications ul li {
+        .possible-applications ul li,
+        .features ul li {
           -ms-flex: 0 0 49%;
           flex: 0 0 49%; } }
       @media (min-width: 768px) {
-        .possible-applications ul li {
+        .possible-applications ul li,
+        .features ul li {
           z-index: 0;
           position: relative; } }
-      .possible-applications ul li:before {
+      .possible-applications ul li:before,
+      .features ul li:before {
         content: " ";
         width: 8px;
         height: 15px;
@@ -404,14 +418,26 @@ ol.how-does-safeword-work {
         position: absolute;
         transform: rotate(45deg) translateX(-5px) translateY(30px);
         transition: all 0.2s ease; }
-      .possible-applications ul li:hover {
+      .possible-applications ul li:hover,
+      .features ul li:hover {
         background-color: #2BB509;
         color: #FFF;
         transition: all 0.2s ease; }
-        .possible-applications ul li:hover:before {
+        .possible-applications ul li:hover:before,
+        .features ul li:hover:before {
           border-right-color: #FFF;
           border-bottom-color: #FFF;
           transition: all 0.2s ease; }
+
+.features-container {
+  background-color: #FFF;
+  padding: 30px 30px; }
+  @media (min-width: 768px) {
+    .features-container {
+      padding: 30px; } }
+  @media (min-width: 768px) {
+    .features-container {
+      padding: 75px; } }
 
 .login-container {
   background-color: #e9eaea; }
