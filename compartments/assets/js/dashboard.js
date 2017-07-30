@@ -45,21 +45,26 @@
       { className: 'list-container' },
       data.map((link, key) =>
         React.createElement(
-          'a',
-          { key, className: 'item', href: `https://s3.amazonaws.com/safeword-storage/${link.Key}` },
-          [
+          'li',
+          {key, className: 'item'},
           React.createElement(
-          'p',
-          { key, className: 'item-detail'},
-          `File Size: ${Math.round(link.Size/1000 * 100) / 100}KB`)
-          ],
-          [
-          React.createElement(
-          'p',
-          { key, className: 'item-detail'},
-          `${moment(link.LastModified).calendar()}`)
-          ]
+            'a',
+            { key, href: `https://s3.amazonaws.com/safeword-storage/${link.Key}`, target: '_blank' },
+            [
+              React.createElement(
+              'p',
+              { key, className: 'item-detail'},
+              `File Size: ${Math.round(link.Size/1000 * 100) / 100}KB`)
+              ],
+              [
+              React.createElement(
+              'p',
+              { key, className: 'item-detail'},
+              `${moment(link.LastModified).calendar()}`
+              )
+            ]
           )
+        )
       )
     );
 
