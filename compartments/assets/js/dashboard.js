@@ -46,10 +46,10 @@
       data.map((link, key) =>
         React.createElement(
           'li',
-          {key, className: 'item', href: `https://s3.amazonaws.com/safeword-storage/${link.Key}`},
+          {key, className: 'item'},
           React.createElement(
             'a',
-            { key, href: `https://s3.amazonaws.com/safeword-storage/${link.Key}` },
+            { key, href: `https://s3.amazonaws.com/safeword-storage/${link.Key}`, target: '_blank' },
             [
               React.createElement(
               'p',
